@@ -1,30 +1,27 @@
-// Модуль 6.1 - Задание №1
+const obj = {
+	rabbit: "ears",
+    fox: "tail"
+};
+let anymal = Object.create(obj);
+anymal.bear = 'paw';
+anymal.wolf = 'fang';
+anymal.hedgehog = 'needles';
+function test(obj) {
+	for (let key in obj) {
+		if (obj.hasOwnProperty(key)) console.log(`${key}: ${obj[key]}`);
+	}
+}
+test(anymal);
 
-function funcArray() {
 
-    let arrayThree = [0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 'one', null, null, null, null, null,];
+или 
 
-    let countZero=0;
-    let countString=0;
-    let countables=0;
-    let uncountables=0;
-    let countNull=0;
-
-    for (i = 0; i<arrayThree.length; i++) {
-            if (typeof arrayThree[i] == 'string') {
-            countString++;
-        } else if (arrayThree[i]==null){
-            countNull++;
-        } else if (arrayThree[i]==0) {
-            countZero++;
-        } else if (arrayThree[i] % 2 === 0) {
-            countables++;
-        } else {
-            uncountables++;
-        }   
-    }
-  
-    console.log(`В массиве: Нулей - ${countZero}, Строк - ${countString}, Нуллов - ${countNull}, Четных - ${countables}, Нечетных - ${uncountables}.`)
-  }
-
-  funcArray();
+const person = {
+    Имя: 'Антон',
+    Возраст: '30',
+    Положение: 'Холост'
+   }
+  const key1 = 'Имя';
+  const key2 = 'Возраст';
+  const key3 = 'Положение';
+  console.log(`${key1}: ${person[key1]}, ${key2}: ${person[key2]}, ${key3}: ${person[key3]}`)
